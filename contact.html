@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contactus.css">
+
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c9d6ff;
+    background-color: linear-gradient(#e2e2e2b2, #c9faff);
+  }
+
+  .container {
+    max-width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.2);
+    background-color: #c9ceff;
+    background: linear-gradient(to right, #e2e2e2d6, #c9f0ff);
+    background: linear-gradient(to left, #e2e2e2d6, #c9f0ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+    font-style:initial;
+    font-weight: 100;
+    font-display:  swap;
+    color: #3a3837;
+    
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  form {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  button {
+    width: 40%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0fb300;
+  }
+  
+  .map-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13.66px;
+  }
+
+  .map-button:hover{
+    background-color: #0fb300;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="contact-info">
+      <p>Email: <span id="email">vmk@edu.in</span></p>
+      <p>Phone: <span id="phone">984-802-2333</span></p>
+      <p>Address: <span id="address">Ameerpet</span></p>
+    </div>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email-input" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <button class="map-button" onclick="openMapLocation()">Open Map Location</button>
+    </form>
+  </div>
+
+  <script>
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Your message has been sent!');
+    document.getElementById('name').value = '';
+    document.getElementById('email-input').value = '';
+    document.getElementById('message').value = '';
+    });
+    function openMapLocation() {
+      var latitude = 51.5074;
+      var longitude = -0.1278;
+      var mapsUrl = "https://www.google.com/maps/place/Vector+India/@17.4371395,78.4457221,20.3z/data=!4m6!3m5!1s0x3bcb90cf5f1fbad1:0x5c42da39641e514!8m2!3d17.4371556!4d78.4455918!16s%2Fg%2F1tkqyqkn?entry=ttu" + latitude + "," + longitude;
+      window.open(mapsUrl, "_blank");
+    }
+  </script>
+</body>
+</html>

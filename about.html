@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: bisque;
+    }
+
+    /* Header styling */
+    header {
+      background-color: black;
+      color: #fff;
+      padding: 9px;
+      text-align: center;
+    }
+
+    h1:hover
+    {
+      box-shadow: 0 3rem 3rem rgba(4, 254, 245, 0.3);
+      z-index: 1;
+
+    }
+    /* Section styling */
+    .section {
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .section h2 {
+      color: #333;
+    }
+
+    /* Categories section */
+    .categories-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .category {
+      background: var(--color-bg2);
+      padding: 11%;
+      border-radius: 10%;
+      transition: var(--transition); 
+    }
+
+    .category:hover {
+      box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .category__icon {
+      background: var(--color-primary);
+      padding: 0.7rem;
+      border-radius: 0.9rem;
+    }
+
+    .category h5 {
+      margin: 2rem 0 1rem;
+    }
+
+    .category p {
+      font-size: 0.85rem;
+    }
+
+    /* Button styling */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Testimonials container */
+    .testimonials__container {
+      position: relative;
+      margin-bottom: 5rem;
+       /* Adjust gap between items as needed */
+    }
+
+    .testimonials__container:hover {
+      box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    /* Individual testimonial */
+    .testimonial {
+      padding-top: 2rem;
+      border: 1px solid #ccc; /* Add border if needed */
+      padding: 20px; /* Add padding if needed */
+    }
+
+    /* Avatar image */
+    .avatar img {
+      
+      width: 120px; 
+      height: 100px; 
+      border-radius: 50%; 
+      position: relative;
+      left: 205px;
+      
+     
+    }
+
+    /* Testimonial information */
+    .testimonial__info {
+      text-align: center;
+    }
+
+    /* Testimonial body */
+    .testimonial__body {
+      position: relative;
+      background: var(--color-primary);
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    /* Testimonial body pseudo element */
+    .testimonial__body::before {
+      content: '';
+      display: block;
+      background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), var(--color-primary), var(--color-primary), var(--color-primary));
+      width: 3%;
+      height: 3px;
+      border-radius: 50% / 80%;
+      position: absolute;
+      left: 46.5%;
+      top: -2rem;
+      transform: rotate(45deg);
+    }
+    .swiper-wrapper{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      position: center;
+
+    }
+    .swiper-wrapper:hover {
+      box-shadow: 0 3rem 3rem rgba(10, 211, 233, 0.3);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+  <section class="section">
+    <h2>About the Institute</h2>
+    <p>Vector India was established with a vision to drive enthusiastic freshers by bridging the gap between industry requirements and enhancing their skill set. We are a pioneer in the field of embedded systems training with over 17 years of meritorious competency. It’s India’s first ISO 9001:2015 certified embedded systems training institute that has won several awards and accolades for its exceptional endeavor in this field. With comprehensive capabilities, incomparable experience, and extensive research, we have become a pioneer in the embedded field. We benefit both companies and candidates, by sourcing well-trained Industry ready professionals to companies and by placing the right candidate with appropriate knowledge in the right company.<br><br>
+
+      Vector India has its training centers in Hyderabad, Bangalore, and Chennai, our training program offers comprehensive training with a well-integrated approach towards the embedded system. The training programs conducted by us not only improve knowledge but increases the efficiency of the students in the field of embedded technology.<br><br>
+      
+      We always maintained quality, trust, and camaraderie as a trusted ally with over 50,000 alumni, and 650 corporate and Tech organizations. We always strive to equal every day as we redefine the nature of the training program and go that extra mile ahead in providing greater value to the corporate, be it in terms of providing an adequate workforce proficiency in highly application - oriented Embedded Systems or in terms of organizing training programs in Embedded Technologies for in-house personnel and virtual training platform by the subject matter experts.</p>
+  </section>
+
+  <section class="section">
+    <h2>Our Achievement</h2>
+    <p>VECTOR India has been named India's Best Training Institute for Embedded Systems, a rare distinction. This was accomplished by adhering to a high-quality Embedded Course curriculum. In addition, we are also known for ensuring that our students receive authentic and real-time Embedded project experience and placements. This is accomplished through a participatory, application-oriented training approach.<br><br>
+
+      Through 100% placement help and lateral placements, we have a commendable and ever-improving placement record. While admission to Vector India's Embedded Systems program is solely based on the All India online Admission Test.<br><br>
+      
+      We're on a quest to change the world, build an empire, and leave a legacy.</p>
+  </section>
+
+  <section class="section">
+    <h2>Our Popular Courses</h2>
+    <div class="categories-container">
+      <article class="category">
+        <div class="category__icon">
+          <img src="https://www.makeawebsiteguru.com/wp-content/uploads/2015/04/html-1024x768.jpg" alt="Master in HTML" height="100%" width="100%">
+        </div>
+        <div class="category__info">
+          <h5>Master in HTML</h5>
+          <p>HTML (Hypertext Markup Language) is the foundation of web development, providing the structure and semantics for content on the internet.</p>
+          <a href="#" class="btn btn-primary">Learn More</a> 
+        </div>
+      </article>
+    
+      <article class="category">
+        <div class="category__icon">
+            <img src="https://www.ankitweblogic.com/javascript/js_img/javascript.png" alt="Become Javascript Champion" height="100%" width="100%">
+        </div>
+        <div class="category__info">
+            <h5>Become Javascript Champion</h5>
+            <p>JavaScript is a versatile programming language that adds interactivity and dynamic behavior to web pages, making them more engaging for users.</p>
+            <a href="#" class="btn btn-primary">Learn More</a> 
+        </div>
+    </article>
+    
+    <article class="category">
+      <div class="category__icon">
+          <img src="https://miro.medium.com/v2/resize:fit:600/1*OFsc0SD55jhi8cjo7aCA4w.jpeg" alt="Become CSS Expert" height="100%" width="100%">
+      </div>
+      <div class="category__info">
+          <h5>Become CSS Expert</h5>
+          <p>CSS (Cascading Style Sheets) enhances the presentation of HTML by styling elements, creating visually appealing and responsive web pages.</p>
+          <a href="#" class="btn btn-primary">Learn More</a> 
+      </div>
+  </article>
+
+    </div>
+  </section>
+
+  <section class="section testimonials__container">
+    <h2>Feedback</h2>
+    <div class="swiper-wrapper">
+        <article class="testimonial swiper-slide">
+            <div class="avatar">
+                <img src="https://media.istockphoto.com/id/1326992705/photo/portrait-of-young-indian-businessman-freelancer-looking-t-camera-with-smile.jpg?s=612x612&w=0&k=20&c=orGn0kjzb6lRBBLvFc8tm5Lem5SIfoL_txxnOsmd8ck=" alt="Rahul's Avatar">
+            </div>
+            <div class="testimonial__info">
+                <h4>Rahul</h4>
+                <small>Student</small>
+            </div>
+            <div class="testimonial__body">
+                <p>Your ability to work across teams and departments is a strength not everyone has. I'm impressed with the way you're working to dismantle silos. For example, when you drew the marketing team into our conversations, it sharpened our ideas and helped us meet goals faster. Keep up the good work</p>
+            </div>
+        </article>
+        <article class="testimonial swiper-slide">
+            <div class="avatar">
+                <img src="https://media.istockphoto.com/id/155288041/photo/indian-girl-in-the-university.jpg?s=612x612&w=0&k=20&c=OPg_GzXdIMZ3btYu61HX79KxSBe7A6BYPSYYknNBafQ=" alt="Navya's Avatar">
+            </div>
+            <div class="testimonial__info">
+                <h4>Navya</h4>
+                <small>Student</small>
+            </div>
+            <div class="testimonial__body">
+                <p>Your ability to work across teams and departments is a strength not everyone has. I'm impressed with the way you're working to dismantle silos. For example, when you drew the marketing team into our conversations, it sharpened our ideas and helped us meet goals faster. Keep up the good work</p>
+            </div>
+        </article>
+    </div>
+  </section>
+</body>
+</html>
